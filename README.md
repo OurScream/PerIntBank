@@ -11,6 +11,6 @@ Persional Internet Bank.
       
 2016.4.29：isshe  
 1. 添加说明;  
-2. 添加文件[funcreq_v1.md:初步功能需求](https://github.com/OurScream/PerIntBank/blob/master/funcreq.txt);                 //个人网络银行包含的功能，第一版。  
+2. 添加文件[funcreq_v1.md:初步功能需求](https://github.com/OurScream/PerIntBank/blob/master/funcreq.md);                 //个人网络银行包含的功能，第一版。  
 3. 添加文件[DocumentReq.md:需编写的文档](https://github.com/OurScream/PerIntBank/blob/master/DocumentReq_v1.md)  
 4. 
