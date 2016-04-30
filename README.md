@@ -30,7 +30,7 @@ Persional Internet Bank.
 7. 添加目录[6_数据库设计说明书_20160430](https://github.com/OurScream/PerIntBank/tree/master/6_%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E%E4%B9%A6_20160430)  
 8. 添加目录[7_Source_20160430](https://github.com/OurScream/PerIntBank/tree/master/7_Source_20160430)  
 9. 添加目录[8_测试计划_20160430](https://github.com/OurScream/PerIntBank/tree/master/8_%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92_20160430)  
-10. 添加目录[9_测试结果和分析报告](https://github.com/OurScream/PerIntBank/tree/master/9_%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%92%8C%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A_20160430)  
+10. 添加目录[9_测试结果和分析报告_20160430](https://github.com/OurScream/PerIntBank/tree/master/9_%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%92%8C%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A_20160430)  
 11. 
 
 
