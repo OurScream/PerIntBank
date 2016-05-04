@@ -33,4 +33,8 @@ Persional Internet Bank.
 10. 添加目录[9_测试结果和分析报告_20160430](https://github.com/OurScream/PerIntBank/tree/master/9_%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%92%8C%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A_20160430)  
 11. 
 
+##2016.5.4:isshe
+1. 上传需求规格说明书  
+2. 上传概要设计说明书  
+3. 
 
