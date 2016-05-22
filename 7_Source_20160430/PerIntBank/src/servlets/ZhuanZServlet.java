@@ -133,6 +133,14 @@ public class ZhuanZServlet extends HttpServlet {
 			return;
 		}
 		
+		if (zzje <= 0)
+		{
+			outputStr = "转账金额输入有误";
+			request.setAttribute("outputMessage", outputStr);
+			request.getRequestDispatcher("Zhuanzhang/zzoutput.jsp").forward(request, response);
+			return;
+		}
+		
 		if(getzhye < zzje)
 		{
 			outputStr = "账户余额不足！";
