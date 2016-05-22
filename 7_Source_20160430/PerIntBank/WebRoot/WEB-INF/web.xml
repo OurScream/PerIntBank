@@ -25,7 +25,36 @@
     <servlet-name>create</servlet-name>
     <servlet-class>servlets.create</servlet-class>
   </servlet>
-
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>YecxServlet</servlet-name>
+    <servlet-class>servlets.YecxServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Per_info</servlet-name>
+    <servlet-class>servlets.Per_info</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Per_info_to</servlet-name>
+    <servlet-class>servlets.Per_info_to</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpD</servlet-name>
+    <servlet-class>perinfo.UpD</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UPdata</servlet-name>
+    <servlet-class>servlets.UPdata</servlet-class>
+  </servlet>
 
 
   <servlet-mapping>
@@ -43,5 +72,25 @@
   <servlet-mapping>
     <servlet-name>create</servlet-name>
     <url-pattern>/create</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>YecxServlet</servlet-name>
+    <url-pattern>/YecxServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Per_info</servlet-name>
+    <url-pattern>/Per_info</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Per_info_to</servlet-name>
+    <url-pattern>/Per_info_to</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpD</servlet-name>
+    <url-pattern>/UpD</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UPdata</servlet-name>
+    <url-pattern>/UPdata</url-pattern>
   </servlet-mapping>
 </web-app>
