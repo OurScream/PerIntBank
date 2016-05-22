@@ -3,7 +3,7 @@
 	<head><title>登录处理</title></head>
 	
 	<body>
-	svbnfdjklsjaflj
+
 		<%
 			String getuserid = request.getParameter("userid"); 		//
 			out.println("getuserid="+getuserid);

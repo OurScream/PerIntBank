@@ -24,9 +24,7 @@ public class Per_info_to extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		
-		
+	
 		person son=new person();
 		Cookie cookies[]=request.getCookies(); 
 		Cookie sCookie=null; 

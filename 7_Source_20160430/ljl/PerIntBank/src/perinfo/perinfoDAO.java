@@ -112,17 +112,18 @@ public class perinfoDAO{
 //                throw new Exception("Update Error:Student Id:" + stu.getZjid());
 //         }
      } catch (Exception e) {
-            System.out.println("nnnnnnnnnnnnn");
+            System.out.println("daonnnnnnnnnnnnn");
      } finally {
      	 DbConnect.closeDB(con, prepStmt, rs);
      }
     }
 
     	  
-	public void ud(person per) throws Exception {
+	public boolean ud(person per) throws Exception {
 		Connection con=null;
 	    PreparedStatement prepStmt=null;
 	    ResultSet rs=null;
+	    boolean flag=false;
 	    try {
 	    	 con=DbConnect.getDBconnection();
          prepStmt = con.prepareStatement("update khxxb set khxm=?,csrq=?,hyzk=?,ssmz=?,zjlx=?,zjqsrq=?,zjjzrq=?,khxb=?,khgj=?,yddh=?,gddh=?,jtdz=?,jtyb=? where zjid=?");
@@ -147,17 +148,19 @@ public class perinfoDAO{
          prepStmt.setString(13,per.getJtyb());
          prepStmt.setString(14,per.getZjid());       
          prepStmt.executeUpdate();
+         flag =true;
        
-        
 //         int rowCount=prepStmt.executeUpdate();
 //         if (rowCount == 0) {
 //                throw new Exception("Update Error:Student Id:" + stu.getZjid());
 //         }
      } catch (Exception e) {
-            System.out.println("nnnnnnnnnnnnn");
+            System.out.println("daonnnnnnnnnnnnn");
      } finally {
      	 DbConnect.closeDB(con, prepStmt, rs);
      }
+		return flag;
+		
     }
 	
 	

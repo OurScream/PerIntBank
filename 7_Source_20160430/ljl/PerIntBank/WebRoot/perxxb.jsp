@@ -53,5 +53,6 @@
 		 	
 		 	
     </table>
+   <a href="javascript:history.back(-1)">返回上一页</a>
 	</body>
 </html>
