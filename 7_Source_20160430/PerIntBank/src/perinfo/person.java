@@ -15,7 +15,7 @@ public class person {
 	private String yddh;//移动电话
 	private String gddh;//固定电话
 	private String jtdz;//家庭地址
-	private String jtyb;//家庭邮编
+	private String jtyb;//固定电话
 	public String getZjid() {
 		return zjid;
 	}
@@ -106,4 +106,9 @@ public class person {
 	public void setJtyb(String jtyb) {
 		this.jtyb = jtyb;
 	}
+	
+	
+	
+	
+
 }

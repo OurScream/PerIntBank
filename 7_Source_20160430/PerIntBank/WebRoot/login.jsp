@@ -133,7 +133,7 @@
   				<td colspan="3" align="center" height = "40">
   					<input type="submit" value="注  册"/>
   					&nbsp;&nbsp;&nbsp;&nbsp;
-  					<input type="reset" value="取  消"/>
+  					<a href="index.jsp"><input type="reset" value="取  消"/></a>
   				</td>
   			</tr>
   		</table>

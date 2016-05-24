@@ -1,5 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8" import ="perinfo.*"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,8 +27,21 @@ $(function(){
 	});
 });
 </script>
-
 </head>
+<% perinfoDAO fodao=new perinfoDAO();
+   person er =new person();
+   person ers =new person();
+   Cookie cookies[]=request.getCookies(); 
+		Cookie sCookie=null; 
+		for(int i=0;i<cookies.length-1;i++){    //用一个循环语句遍历刚才建立的Cookie对象数组
+	
+			sCookie=cookies[i];
+		}
+		er.setZjid(sCookie.getValue());
+  ers= fodao.find(er);
+
+ %>
+
 
 <body>
 
@@ -163,27 +175,24 @@ $(function(){
 				<div class="mainright">
          <form action="UPdata" method="post">
 			   <table border="0" width="238" height="252" align="center">
-			   <br/>
-			   <br/>
-			   <tr><td><font color="black">证件号</font></td><td><td><input name="zjid" type="text" ></td></tr>
-			   
-			   <tr><td><font color="black"> 客户姓名</font></td><td><td><input name="khxm" type="text"></td></tr>
-			   <tr><td><font color="black">出生日期</font></td><td><td><input name="csrq" type="text"></td></tr>
-			   <tr><td><font color="black">婚姻状况</font></td><td><td><input name="hyzk" type="text"></td></tr>
-			   <tr><td><font color="black">所属民族</font></td><td><td><input name="ssmz" type="text"></td></tr>
-			   <tr><td><font color="black">证件类型</font></td><td><td><input name="zjlx" type="text"></td></tr>
-			   <tr><td><font color="black">证件有效起始日期</font></td><td><td><input name="zjqsrq" type="text"></td></tr>
-			   <tr><td><font color="black">证件有效截止日期</font></td><td><td><input name="zjjzrq" type="text"></td></tr>
-			   <tr><td><font color="black">客户性别</font></td><td><td><input name="khxb" type="text"></td></tr>
-			   <tr><td><font color="black">客户国籍</font></td><td><td><input name="khgj" type="text"></td></tr>
-			   <tr><td><font color="black">移动电话</font></td><td><td><input name="yddh" type="text"></td></tr>
-			   <tr><td><font color="black">固定电话</font></td><td><td><input name="gddh" type="text"></td></tr>
-			   <tr><td><font color="black">家庭地址</font></td><td><td><input name="jtdz" type="text"></td></tr>
-			   <tr><td><font color="black">家庭邮编</font></td><td><td><input name="jtyb" type="text"></td></tr>
+				<br/>
+				<br/>		  
+			   <tr><td><font color="black">客户姓名</font></td><td><td><input name="khxm" type="text" value =<%= ers.getKhxm() %>></td></tr>
+			   <tr><td><font color="black">出生日期</font></td><td><td><input name="csrq" type="text" value =<%= ers.getCsrq() %>></td></tr>
+			   <tr><td><font color="black">婚姻状况</font></td><td><td><input name="hyzk" type="text" value =<%= ers.getHyzk() %>></td></tr>
+			   <tr><td><font color="black">所属民族</font></td><td><td><input name="ssmz" type="text" value =<%= ers.getSsmz() %>></td></tr>
+			   <tr><td><font color="black">证件类型</font></td><td><td><input name="zjlx" type="text" value =<%= ers.getZjlx() %>></td></tr>
+			   <tr><td><font color="black">证件有效起始日期</font></td><td><td><input name="zjqsrq" type="text" value =<%= ers.getZjqsrq() %>></td></tr>
+			   <tr><td><font color="black">证件有效截止日期</font></td><td><td><input name="zjjzrq" type="text" value =<%= ers.getZjjzrq() %>></td></tr>
+			   <tr><td><font color="black">客户性别</font></td><td><td><input name="khxb" type="text" value =<%= ers.getKhxb() %>></td></tr>
+			   <tr><td><font color="black">客户国籍</font></td><td><td><input name="khgj" type="text" value =<%= ers.getKhgj() %>></td></tr>
+			   <tr><td><font color="black">移动电话</font></td><td><td><input name="yddh" type="text" value =<%= ers.getYddh() %>></td></tr>
+			   <tr><td><font color="black">固定电话</font></td><td><td><input name="gddh" type="text" value =<%= ers.getGddh() %>></td></tr>
+			   <tr><td><font color="black">家庭地址</font></td><td><td><input name="jtdz" type="text" value =<%= ers.getJtdz() %>></td></tr>
+			   <tr><td><font color="black">家庭邮编</font></td><td><td><input name="jtyb" type="text" value =<%= ers.getJtyb() %>></td></tr>
 			   <tr align="center">
 			   <td colspan="2">
-			   <br/>  
-			     <input type="submit" value="提     交">
+			     <input type="submit" value="提     交" align="center">
                  </td>
                  </tr>
                  </table>
