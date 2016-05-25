@@ -165,9 +165,7 @@ $(function(){
          <table align="center">
          <br/>
          <br/>
-         <tr>
-         <th><font color="black">ID</font><input type="text" name="zjid"></th>
-         <tr>
+         
          <th><font color="black">旧密码</font><input type="text" name="jmm">
          </th>
          </tr>

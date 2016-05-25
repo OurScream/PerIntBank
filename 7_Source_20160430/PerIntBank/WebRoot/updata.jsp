@@ -31,13 +31,9 @@ $(function(){
 <% perinfoDAO fodao=new perinfoDAO();
    person er =new person();
    person ers =new person();
-   Cookie cookies[]=request.getCookies(); 
-		Cookie sCookie=null; 
-		for(int i=0;i<cookies.length-1;i++){    //用一个循环语句遍历刚才建立的Cookie对象数组
-	
-			sCookie=cookies[i];
-		}
-		er.setZjid(sCookie.getValue());
+   String s2 =(String)session.getAttribute("PerIntBankUserId");
+ 
+		er.setZjid(s2);
   ers= fodao.find(er);
 
  %>

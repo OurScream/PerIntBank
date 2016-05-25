@@ -9,6 +9,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import perinfo.perinfoDAO;
 import perinfo.person;
@@ -42,18 +43,20 @@ public class UPdata extends HttpServlet {
 		String jtdz =request.getParameter("jtdz");
 		String jtyb =request.getParameter("jtyb");
 		
-		Cookie cookies[]=request.getCookies(); //读出用户硬盘上的Cookie，并将所有的Cookie放到一个cookie对象数组里面
-		Cookie sCookie=null; 
-		for(int i=0;i<cookies.length-1;i++){    //用一个循环语句遍历刚才建立的Cookie对象数组
-		sCookie=cookies[i];   //取出数组中的一个Cookie对象
-		if(sCookie!=null){
-		   
-		    System.out.println( sCookie.getValue()+"scookie");
-		      }
-		   }
+		HttpSession session = request.getSession();
+		String ss =(String)session.getAttribute("PerIntBankUserId");
+//		Cookie cookies[]=request.getCookies(); //读出用户硬盘上的Cookie，并将所有的Cookie放到一个cookie对象数组里面
+//		Cookie sCookie=null; 
+//		for(int i=0;i<cookies.length-1;i++){    //用一个循环语句遍历刚才建立的Cookie对象数组
+//		sCookie=cookies[i];   //取出数组中的一个Cookie对象
+//		if(sCookie!=null){
+//		   
+//		    System.out.println( sCookie.getValue()+"scookie");
+//		      }
+//		   }
 
 		person per=new person();
-		per.setZjid(sCookie.getValue());
+		per.setZjid(ss);
 		per.setKhxm(khxm);
 	    per.setCsrq(csrq);
 	    per.setHyzk(hyzk);

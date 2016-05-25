@@ -8,6 +8,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class UpD extends HttpServlet {
 
@@ -20,30 +21,33 @@ public class UpD extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	
-		String zjid =request.getParameter("zjid");
+		HttpSession session = request.getSession();
+		String sss =(String)session.getAttribute("PerIntBankUserId");
+		
+//		String zjid =request.getParameter("zjid");
 		String jmm =request.getParameter("jmm");
 		String khdlmm =request.getParameter("khdlmm");
 		String khdlmm1 =request.getParameter("khdlmm1");
-		System.out.println(zjid);
+//		System.out.println(zjid);
 		System.out.println(khdlmm);
 		person stu =new person();
-		stu.setZjid(zjid);
+		stu.setZjid(sss);
 		stu.setKhdlmm(khdlmm);
 		System.out.println(stu);
 		System.out.println(stu.getZjid());
 		System.out.println(stu.getKhdlmm());
 		
-		Cookie cookies[]=request.getCookies(); //读出用户硬盘上的Cookie，并将所有的Cookie放到一个cookie对象数组里面
-		Cookie sCookie=null; 
-		for(int i=0;i<cookies.length-1;i++){    //用一个循环语句遍历刚才建立的Cookie对象数组
-		sCookie=cookies[i];   //取出数组中的一个Cookie对象
-		if(sCookie!=null){
-		   
-		    System.out.println( sCookie.getValue()+"scookie");
-		      }
-		   }
-		if(sCookie.getValue().equals(zjid)){
+//		Cookie cookies[]=request.getCookies(); //读出用户硬盘上的Cookie，并将所有的Cookie放到一个cookie对象数组里面
+//		Cookie sCookie=null; 
+//		for(int i=0;i<cookies.length-1;i++){    //用一个循环语句遍历刚才建立的Cookie对象数组
+//		sCookie=cookies[i];   //取出数组中的一个Cookie对象
+//		if(sCookie!=null){
+//		   
+//		    System.out.println( sCookie.getValue()+"scookie");
+//		      }
+//		   }
+		
+		
 		perinfoDAO idao =new perinfoDAO();
 		try {
 			person s=new person();
@@ -86,12 +90,7 @@ public class UpD extends HttpServlet {
 //			e.printStackTrace();
 //		}
 		}
-		else{
-			request.getRequestDispatcher("error.jsp").forward(request, response);
-			 System.out.println("不能修改");
-		}
 	
-	}
 
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)

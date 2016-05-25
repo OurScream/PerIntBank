@@ -5,7 +5,7 @@ import java.util.Properties;
 public class DbConnect{
 	private static String driverName="com.mysql.jdbc.Driver";
 	private static String userName="root";
-	private static String userPwd = "root";
+	private static String userPwd = "";
 	private static String dbName = "perintback";
 	
 	public static Connection getDBconnection(){
